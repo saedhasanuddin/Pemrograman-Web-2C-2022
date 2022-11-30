@@ -9,6 +9,12 @@ $alamat = (isset($_POST['alamat'])) ? htmlentities($_POST['alamat']) : "" ;
 $password = md5('password');
 
 if (!empty($_POST['input_user_validate'])) {
+    $select = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$username");
+        $message = '<script>alert("username yang dimasukkan sudah ada");
+                    window.location="../user"</script> 
+                    </script>';
+
+    }else{
     $query = mysqli_query($conn,"UPDATE tb_user SET nama='$name', username='$username', level='$level', nohp='$nohp', alamat='$alamat' WHERE id=
     '$id'");
     if($query) {
@@ -18,5 +24,5 @@ if (!empty($_POST['input_user_validate'])) {
     }else { 
         $message = '<script>alert("data gagal  diupdate")';
     
-    }
-}echo $message;
+    }}
+echo $message;

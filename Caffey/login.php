@@ -1,5 +1,6 @@
 <?php
-if(!empty ($_SESSION['username_decafe'])){
+//session_start();
+if (!empty($_SESSION['username_decafe'])) {
     header('location:home');
 }
 ?>
@@ -12,7 +13,7 @@ if(!empty ($_SESSION['username_decafe'])){
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>DeCafe -Aplikasi Pemesanan Makanan dan Minuman Cafe</title>
+    <title>Decafe - Aplikasi pemesanan makanan dan minuman Cafe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
@@ -87,7 +88,7 @@ if(!empty ($_SESSION['username_decafe'])){
 
             <div class="form-floating">
                 <label for="validationCustom01" class="form-label"></label>
-                <input name="username" type="email" class="form-control" id="validationCustom01" placeholder="Email" name="username" value="" required>
+                <input type="email" class="form-control" id="validationCustom01" placeholder="Email" name="username" value="" required>
                 <label for="floatinginput">Email address</label>
                 <div class="invalid-feedback">
                     Masukkan email yang valid.
@@ -95,7 +96,7 @@ if(!empty ($_SESSION['username_decafe'])){
             </div>
             <div class="form-floating">
                 <label for="validationCustom02" class="form-label"></label>
-                <input name="password" type="password" class="form-control" id="validationCustom01" placeholder="Password" name="password" value="" required>
+                <input type="password" class="form-control" id="validationCustom01" placeholder="Password" name="password" value="" required>
                 <label for="floatingPassword">Password</label>
                 <div class="invalid-feedback">
                     Masukkan Password
@@ -107,7 +108,7 @@ if(!empty ($_SESSION['username_decafe'])){
                     <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit" name="submitxyz" value="Masuk">Sign in</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit_validate" value="Masuk">Sign in</button>
             <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
         </form>
     </main>
